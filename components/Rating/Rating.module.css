@@ -1,0 +1,16 @@
+.wrapper {
+  display: flex;
+  gap: 5px;
+}
+
+.fill {
+  fill: var(--primary);
+}
+
+.star {
+  transition: fill .2s ease-in-out;
+}
+
+.editable {
+  cursor: pointer;
+}

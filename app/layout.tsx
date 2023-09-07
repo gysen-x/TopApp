@@ -1,6 +1,9 @@
 import './globals.css'
+import stls from './page.module.css'
+import cn from 'classnames'
 import type { Metadata } from 'next'
 import { Noto_Sans } from 'next/font/google'
+import { Footer, Header, Sidebar } from '../components'
 
 const inter = Noto_Sans({
 	subsets: ['cyrillic', 'latin'],
@@ -19,7 +22,12 @@ export default function RootLayout({
 }): JSX.Element {
 	return (
 		<html lang='en'>
-			<body className={inter.className}>{children}</body>
+			<body className={cn(inter.className, stls.wrapper)}>
+				<Header className={stls.header} />
+				<Sidebar className={stls.sidebar} />
+				<div className={stls.body}>{children}</div>
+				<Footer className={stls.footer} />
+			</body>
 		</html>
 	)
 }

@@ -1,0 +1,38 @@
+.footer {
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  grid-template-areas:
+    'reservedRights userAgreement privacyPolicy';
+  gap: 10px 40px;
+  padding: 30px 25px;
+  font-size: 16px;
+  line-height: 20px;
+  background-color: var(--primary);
+  color: var(--white);
+}
+
+.footer a:hover {
+  color: var(--grey-light);
+}
+
+.reservedRights {
+  grid-area: reservedRights;
+}
+
+.userAgreement {
+  grid-area: userAgreement;
+}
+
+.privacyPolicy {
+  grid-area: privacyPolicy;
+}
+
+@media (max-width: 767px) {
+  .footer {
+    grid-template-columns: minmax(320px, 1fr);
+    grid-template-areas:
+      'reservedRights'
+      'userAgreement'
+      'privacyPolicy';
+  }
+}

@@ -1,4 +1,4 @@
-import { IHtagProps } from './Htag.props'
+import IHtagProps from './Htag.props'
 import stls from './Htag.module.css'
 
 export const Htag = ({ tag, children }: IHtagProps): JSX.Element => {
