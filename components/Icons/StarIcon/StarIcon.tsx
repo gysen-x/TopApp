@@ -1,5 +1,3 @@
-'use client'
-
 import { IStarIconProps } from './StarIcon.props'
 
 export const StarIcon = ({
