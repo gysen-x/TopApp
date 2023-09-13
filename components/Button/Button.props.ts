@@ -1,6 +1,6 @@
 import { ButtonHTMLAttributes, DetailedHTMLProps, ReactNode } from 'react'
 
-export interface IButtonProps
+export interface ButtonProps
 	extends DetailedHTMLProps<
 		ButtonHTMLAttributes<HTMLButtonElement>,
 		HTMLButtonElement

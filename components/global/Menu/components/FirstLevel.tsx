@@ -1,27 +1,34 @@
 import stls from '../Menu.module.css'
 import cn from 'classnames'
 import Link from 'next/link'
+
 import firstLevelMenu from '@/helpers/helpers'
+import { MenuItem } from '@/interfaces/menu.interface'
+import SecondLevel from './SecondLevel'
 
 export default function FirstLevel({
-	firstCategory
+	firstCategory,
+	menu
 }: {
 	firstCategory: number
-}): JSX.Element {
+	menu: MenuItem[]
+}) {
 	return (
 		<>
-			{firstLevelMenu.map(m => (
-				<div key={m.route}>
-					<Link href={`/${m.route}`}>
+			{firstLevelMenu.map(firstLevelItem => (
+				<div key={firstLevelItem.route}>
+					<Link href={`/${firstLevelItem.route}`}>
 						<div
 							className={cn(stls.firstLevel, {
-								[stls.firstLevelActive]: m.id === firstCategory
+								[stls.firstLevelActive]: firstLevelItem.id === firstCategory
 							})}>
-							{m.icon}
-							<span>{m.name}</span>
+							{firstLevelItem.icon}
+							<span>{firstLevelItem.name}</span>
 						</div>
 					</Link>
-					{/* {m.id === firstCategory && buildSecondLevel(m)} */}
+					{firstLevelItem.id === firstCategory && (
+						<SecondLevel menu={menu} firstLevelItem={firstLevelItem} />
+					)}
 				</div>
 			))}
 		</>

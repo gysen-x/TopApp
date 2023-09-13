@@ -1,8 +1,10 @@
-import { getMenu } from '@/api/menu'
 import firstLevelMenu from '@/helpers/helpers'
+import { notFound } from 'next/navigation'
 
 export default function page({ params }: { params: { type: string } }) {
-	// const menu = getMenu(0)
+	const firstCategoryItem = firstLevelMenu.find(m => m.route === params.type)
+	if (!firstCategoryItem) notFound()
+
 	return (
 		<div>
 			First category Type page

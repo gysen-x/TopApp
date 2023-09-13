@@ -1,4 +1,4 @@
-import { IButtonProps } from './Button.props'
+import { ButtonProps } from './Button.props'
 import stls from './Button.module.css'
 import cn from 'classnames'
 import { ArrowIcon } from '..'
@@ -9,7 +9,7 @@ export const Button = ({
 	className,
 	arrow = 'none',
 	...props
-}: IButtonProps): JSX.Element => {
+}: ButtonProps) => {
 	return (
 		<button
 			className={cn(

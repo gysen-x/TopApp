@@ -3,7 +3,7 @@ import { getPageTopApp } from '@/api/pageTopApp'
 import { getProduct } from '@/api/product'
 import firstLevelMenu from '@/helpers/helpers'
 import { Metadata } from 'next'
-import { notFound } from 'next/navigation'
+import { notFound, useParams } from 'next/navigation'
 
 export const metadata: Metadata = {
 	title: 'Product Page'
@@ -14,10 +14,14 @@ export default async function Course({
 }: {
 	params: { alias: string; type: string }
 }) {
+	const firstCategoryItem = firstLevelMenu.find(m => m.route === params.type)
 	const page = await getPageTopApp(params.alias)
-	if (!page) {
+	if (!page || !firstCategoryItem) {
 		notFound()
 	}
+
+	console.log('firstCategoryItem: ', firstCategoryItem)
+
 	const products = await getProduct()
 
 	return (

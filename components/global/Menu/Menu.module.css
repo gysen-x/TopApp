@@ -28,6 +28,7 @@
   text-transform: uppercase;
   color: var(--gray-dark);
   cursor: pointer;
+  user-select: none;
 }
 
 .secondBlock {
@@ -37,7 +38,15 @@
   border-left: 1px solid #DFDFDF;
 }
 
-.secondBlockOpened:last-child {
+.secondLevelBlock {
+  display: none;
+}
+
+.secondLevelBlockOpened {
+  display: block !important;
+}
+
+.secondLevelBlockOpened:last-child {
   margin-bottom: 20px;
 }
 
