@@ -27,7 +27,7 @@
 }
 
 .ghost {
-  border: 1px solid var(--grey-light);
+  border: 1px solid var(--gray-light);
   color: var(--black);
   background: none;
 }

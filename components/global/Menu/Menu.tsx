@@ -1,56 +1,15 @@
-import { FirstLevelMenuItem } from '@/interfaces/menu.interface'
-import {
-	BooksIcon,
-	CoursesIcon,
-	ProductsIcon,
-	ServicesIcon
-} from '@/components/global/Sidebar/components'
-import { TopLevelCategory } from '@/interfaces/page.interface'
+import stls from './Menu.module.css'
 import { getMenu } from '@/api/menu'
+import FirstLevel from './components/FirstLevel'
 
-const firstLevelMenu: FirstLevelMenuItem[] = [
-	{
-		route: 'courses',
-		name: 'Курсы',
-		icon: <CoursesIcon />,
-		id: TopLevelCategory.Courses
-	},
-	{
-		route: 'services',
-		name: 'Сервисы',
-		icon: <ServicesIcon />,
-		id: TopLevelCategory.Services
-	},
-	{
-		route: 'books',
-		name: 'Книги',
-		icon: <BooksIcon />,
-		id: TopLevelCategory.Books
-	},
-	{
-		route: 'products',
-		name: 'Продукты',
-		icon: <ProductsIcon />,
-		id: TopLevelCategory.Products
-	}
-]
+const firstCategory = 0
 
 export const Menu = async () => {
-	const menu = await getMenu(0)
-
-	const buildFirstLevel = () => {}
-
-	const buildSecondLevel = () => {}
-
-	const buildThirdLevel = () => {}
+	const menu = await getMenu(firstCategory)
 
 	return (
-		<div>
-			<ServicesIcon />
-			<ProductsIcon />
-			<CoursesIcon />
-			<BooksIcon />
-			{menu.length}
+		<div className={stls.menu}>
+			{<FirstLevel firstCategory={firstCategory} menu={menu} />}
 		</div>
 	)
 }

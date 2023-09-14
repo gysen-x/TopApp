@@ -18,7 +18,6 @@
 
 .sidebar {
   grid-area: sidebar;
-  border: 3px solid #e2e2e2;
 }
 
 .body {

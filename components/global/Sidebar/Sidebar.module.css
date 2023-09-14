@@ -1,0 +1,14 @@
+.sidebar {
+  display: grid;
+  align-content: start;
+  gap: 20px;
+}
+
+.logo {
+  margin-top: 34px;
+}
+
+.search {
+  border-radius: 10px;
+  border: 3px solid var(--primary);
+}
