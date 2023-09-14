@@ -1,4 +1,4 @@
-import firstLevelMenu from '@/helpers/helpers'
+import { firstLevelMenu } from '@/helpers/helpers'
 import { notFound } from 'next/navigation'
 
 export default function page({ params }: { params: { type: string } }) {

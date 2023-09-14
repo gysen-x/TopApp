@@ -1,35 +1,35 @@
 import { getMenu } from '@/api/menu'
 import { getPageTopApp } from '@/api/pageTopApp'
 import { getProduct } from '@/api/product'
-import firstLevelMenu from '@/helpers/helpers'
+import TopPageComponent from '@/components/pages/TopPageComponent/TopPageComponent'
+import { firstLevelMenu } from '@/helpers/helpers'
 import { Metadata } from 'next'
-import { notFound, useParams } from 'next/navigation'
+import { notFound } from 'next/navigation'
 
 export const metadata: Metadata = {
 	title: 'Product Page'
 }
 
-export default async function Course({
+export default async function TopPage({
 	params
 }: {
 	params: { alias: string; type: string }
 }) {
 	const firstCategoryItem = firstLevelMenu.find(m => m.route === params.type)
+	const products = await getProduct()
 	const page = await getPageTopApp(params.alias)
 	if (!page || !firstCategoryItem) {
 		notFound()
 	}
 
-	console.log('firstCategoryItem: ', firstCategoryItem)
-
-	const products = await getProduct()
-
 	return (
-		<div>
-			<p>Type - {params.type}</p>
-			<p>Alias - {params.alias}</p>
-			<p>courses length {products.length}</p>
-		</div>
+		<>
+			<TopPageComponent
+				firstCategory={firstCategoryItem.id}
+				page={page}
+				products={products}
+			/>
+		</>
 	)
 }
 

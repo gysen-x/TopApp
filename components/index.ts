@@ -1,15 +1,18 @@
 // global
-export * from './global/Header/Header'
-export * from './global/Footer/Footer'
-export * from './global/Sidebar/Sidebar'
-export * from './global/Menu/Menu'
+export * from './layout/Header/Header'
+export * from './layout/Footer/Footer'
+export * from './layout/Sidebar/Sidebar'
+export * from './layout/Menu/Menu'
 
 // components
-export * from './Htag/Htag'
-export * from './Button/Button'
-export * from './P/P'
-export * from './Tag/Tag'
+export * from './global/Htag/Htag'
+export * from './global/Button/Button'
+export * from './global/P/P'
+export * from './global/Tag/Tag'
+export * from './global/Card/Card'
 
 // icons
-export * from './Icons/ArrowIcon/ArrowIcon'
-export * from './Icons/StarIcon/StarIcon'
+export * from './icons/ArrowIcon/ArrowIcon'
+export * from './icons/StarIcon/StarIcon'
+export * from './icons/RateIcon/RateIcon'
+export * from './icons/CheckIcon/CheckIcon'
