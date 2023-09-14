@@ -6,7 +6,7 @@
     '. header header .'
     '. sidebar body .'
     'footer footer footer footer';
-  gap: 0 30px;
+  gap: 40px 30px;
   min-height: 100vh;
 }
 
@@ -31,6 +31,10 @@
 
 @media (max-width: 767px) {
 
+  .body {
+    padding: 15px;
+  }
+
   .wrapper {
     grid-template-columns: minmax(320px, 1fr);
     grid-template-areas:
@@ -44,6 +48,6 @@
   }
 
   .sidebar {
-    display: none;
+    display: none !important;
   }
 }

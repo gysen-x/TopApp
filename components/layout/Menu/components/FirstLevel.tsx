@@ -2,7 +2,7 @@ import stls from '../Menu.module.css'
 import cn from 'classnames'
 import Link from 'next/link'
 
-import firstLevelMenu from '@/helpers/helpers'
+import { firstLevelMenu } from '@/helpers/helpers'
 import { MenuItem } from '@/interfaces/menu.interface'
 import SecondLevel from './SecondLevel'
 
