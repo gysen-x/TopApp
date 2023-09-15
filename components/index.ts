@@ -10,9 +10,11 @@ export * from './global/Button/Button'
 export * from './global/P/P'
 export * from './global/Tag/Tag'
 export * from './global/Card/Card'
+export * from './global/Sort/Sort'
 
 // icons
 export * from './icons/ArrowIcon/ArrowIcon'
 export * from './icons/StarIcon/StarIcon'
 export * from './icons/RateIcon/RateIcon'
 export * from './icons/CheckIcon/CheckIcon'
+export * from './icons/SortIcon/SortIcon'
