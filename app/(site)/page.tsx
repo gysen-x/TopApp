@@ -1,4 +1,5 @@
-import { Button, Htag, Tag } from '@/components'
+import { Button, Htag, Input, Tag, Textarea } from '@/components'
+import { Search } from '@/components'
 
 export default async function Home() {
 	return (
@@ -12,9 +13,9 @@ export default async function Home() {
 				Button
 			</Button>
 			<Htag tag='h3'>Subsubtitle</Htag>
-			<Tag size='s' color='red'>
-				Small Red
-			</Tag>
+
+			<Input />
+			<Textarea />
 		</main>
 	)
 }

@@ -17,7 +17,7 @@ export const Tag = ({
 				[stls.s]: size === 's',
 				[stls.ghost]: color === 'ghost',
 				[stls.green]: color === 'green',
-				[stls.grey]: color === 'grey',
+				[stls.gray]: color === 'gray',
 				[stls.primary]: color === 'primary',
 				[stls.red]: color === 'red'
 			})}

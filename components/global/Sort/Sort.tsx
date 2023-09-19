@@ -3,6 +3,7 @@
 import stls from './Sort.module.css'
 import cn from 'classnames'
 import { SortEnum, SortProps } from './Sort.props'
+
 import SortIcon from '@/components/icons/SortIcon/SortIcon'
 
 export function Sort({ sort, setSort, className, ...props }: SortProps) {
@@ -18,7 +19,7 @@ export function Sort({ sort, setSort, className, ...props }: SortProps) {
 				className={cn({ [stls.active]: sort === SortEnum.Price })}
 				onClick={() => setSort(SortEnum.Price)}>
 				<SortIcon className={stls.sortIcon} />
-				По&nbsp;цене
+				По цене
 			</span>
 		</div>
 	)

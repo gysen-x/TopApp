@@ -1,11 +1,11 @@
 import stls from './TopPageComponent.module.css'
 import { TopPageComponentProps } from './TopPageComponent.props'
 
-import { Htag, Sort, Tag } from '@/components'
+import { Htag, Tag } from '@/components'
 import { TopLevelCategory } from '@/interfaces/page.interface'
 import { HhData } from './components/HhData/HhData'
 import Advantages from './components/Advantages/Advantages'
-import { SortEnum } from '@/components/global/Sort/Sort.props'
+import Products from './components/Products/Products'
 
 export default function TopPageComponent({
 	page,
@@ -14,19 +14,7 @@ export default function TopPageComponent({
 }: TopPageComponentProps) {
 	return (
 		<div className={stls.wrapper}>
-			<div className={stls.title}>
-				<Htag tag='h1'> {page.title}</Htag>
-				{products && (
-					<Tag color='grey' size='m'>
-						{products.length}
-					</Tag>
-				)}
-				{/* <Sort sort={SortEnum.Price} setSort={() => {}} /> */}
-			</div>
-			<div>
-				{products && products.map(p => <div key={p._id}>{p.title}</div>)}
-			</div>
-
+			<Products page={page} products={products} />
 			<div className={stls.hhTitle}>
 				<Htag tag='h2'>Вакансии - {page.category}</Htag>
 				<Tag color='red' size='m'>
