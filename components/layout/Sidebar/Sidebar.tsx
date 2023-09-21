@@ -5,6 +5,7 @@ import ISidebarProps from './Sidebar.props'
 import { Menu } from '../Menu/Menu'
 import Logo from '@/public/Logo.svg'
 import Image from 'next/image'
+import { Search } from '@/components/global/Search/Search'
 
 export const Sidebar = ({
 	className,
@@ -19,7 +20,7 @@ export const Sidebar = ({
 				height='44'
 				alt='Logo'
 			/>
-			<div className={stls.search}>Search</div>
+			<Search />
 			<Menu />
 		</div>
 	)

@@ -1,6 +1,7 @@
-import { ButtonProps } from './Button.props'
 import stls from './Button.module.css'
 import cn from 'classnames'
+import { ButtonProps } from './Button.props'
+
 import { ArrowIcon } from '../..'
 
 export const Button = ({

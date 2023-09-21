@@ -13,3 +13,32 @@
   justify-items: left;
   gap: 20px;
 }
+
+.seo h1 {
+  font-size: 26px;
+  font-weight: 500;
+  margin: 0;
+}
+
+.seo h2 {
+  font-size: 22px;
+  font-weight: 500;
+  margin-top: 0;
+  margin-bottom: 25px;
+}
+
+.seo h3 {
+  font-size: 20px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.seo p,
+.seo ul {
+  margin-bottom: 20px;
+}
+
+.seo li {
+  margin-bottom: 15px;
+  margin-left: 20px;
+}

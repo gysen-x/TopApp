@@ -13,7 +13,6 @@
 .header {
   display: none;
   grid-area: header;
-  border: 3px solid #e2e2e2;
 }
 
 .sidebar {
@@ -22,7 +21,6 @@
 
 .body {
   grid-area: body;
-  border: 3px solid #e2e2e2;
 }
 
 .footer {
