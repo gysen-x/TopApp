@@ -14,6 +14,8 @@ export * from './global/Sort/Sort'
 export * from './global/Input/Input'
 export * from './global/Textarea/Textarea'
 export * from './global/Textarea/Textarea'
+export * from './global/Product/Product'
+export * from './global/Divider/Divider'
 
 // icons
 export * from './icons/ArrowIcon/ArrowIcon'

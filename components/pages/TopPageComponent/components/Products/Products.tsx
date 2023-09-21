@@ -5,7 +5,7 @@ import cn from 'classnames'
 import ProductsProps from './Products.props'
 
 import { SortEnum } from '@/components/global/Sort/Sort.props'
-import { Htag, Sort, Tag } from '@/components'
+import { Htag, Product, Sort, Tag } from '@/components'
 import { useReducer } from 'react'
 import { sortReducer } from '../../reducers/sort.reducer'
 
@@ -40,7 +40,7 @@ export default function Products({
 			</div>
 			<div>
 				{sortedProducts &&
-					sortedProducts.map(p => <div key={p._id}>{p.title}</div>)}
+					sortedProducts.map(p => <Product key={p._id} product={p} />)}
 			</div>
 		</div>
 	)
