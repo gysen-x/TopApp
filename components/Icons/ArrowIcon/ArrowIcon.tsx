@@ -1,4 +1,4 @@
-export const ArrowIcon = ({
+const ArrowIcon = ({
 	fill = '#3B434E',
 	width = '6',
 	height = '10'
@@ -14,3 +14,5 @@ export const ArrowIcon = ({
 		</svg>
 	)
 }
+
+export default ArrowIcon

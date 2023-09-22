@@ -5,16 +5,12 @@ import { Card } from '../Card/Card'
 import Image from 'next/image'
 import { Tag } from '../Tag/Tag'
 import { Button } from '../Button/Button'
-import { declOfNumbers, declonationOfNumbers, priceRu } from '@/helpers/helpers'
+import { declonationOfNumbers, priceRu } from '@/helpers/helpers'
 import { Divider } from '../Divider/Divider'
 
-export const Product = ({
-	product,
-	className,
-	...props
-}: ProductProps): JSX.Element => {
+export const Product = ({ product, className }: ProductProps): JSX.Element => {
 	return (
-		<Card className={stls.product}>
+		<Card className={cn(className, stls.product)}>
 			<div className={stls.logo}>
 				<Image
 					src={`${process.env.NEXT_PUBLIC_DOMAIN}${product.image}`}
@@ -78,7 +74,7 @@ export const Product = ({
 					</div>
 				)}
 			</div>
-			<Divider className={stls.hr} />
+			<Divider className={cn(stls.hr, stls.hr2)} />
 			<div className={stls.actions}>
 				<Button appearance='primary'>Узнать подробнее</Button>
 				<Button appearance='ghost' arrow='right'>

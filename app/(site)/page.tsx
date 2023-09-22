@@ -1,5 +1,4 @@
-import { Button, Htag, Input, Tag, Textarea } from '@/components'
-import { Search } from '@/components'
+import { Button, Htag, Input, Textarea } from '@/components'
 
 export default async function Home() {
 	return (

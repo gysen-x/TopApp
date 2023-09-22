@@ -18,7 +18,7 @@ export * from './global/Product/Product'
 export * from './global/Divider/Divider'
 
 // icons
-export * from './icons/ArrowIcon/ArrowIcon'
+export { default as ArrowIcon } from './icons/ArrowIcon/ArrowIcon'
 export * from './icons/StarIcon/StarIcon'
 export * from './icons/RateIcon/RateIcon'
 export * from './icons/CheckIcon/CheckIcon'
