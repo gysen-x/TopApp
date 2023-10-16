@@ -1,6 +1,7 @@
 import { Button, Htag, Input, Textarea } from '@/components'
+import Rating from '@/components/global/Rating/Rating'
 
-export default async function Home() {
+export default function Home() {
 	return (
 		<main>
 			<Htag tag='h1'>Title</Htag>
@@ -15,6 +16,8 @@ export default async function Home() {
 
 			<Input />
 			<Textarea />
+
+			<Rating rating={4} isEditable />
 		</main>
 	)
 }

@@ -1,8 +1,11 @@
 .product {
   display: grid;
   grid-template-columns: [start] 70px [logoend] 30px [titlestart] calc(50% - 100px) [middle] auto [pricestart] 1fr [priceend] 40px [creditstart] auto [creditend] 40px [ratestart] auto [end];
-  margin-bottom: 30px;
   padding: 30px;
+}
+
+.cardComments {
+  margin-bottom: 50px;
 }
 
 .logo {
@@ -12,6 +15,7 @@
 
 .title {
   grid-column: titlestart / middle;
+  margin-right: 20px;
 }
 
 .tags {

@@ -1,0 +1,11 @@
+.star:active {
+  outline: none;
+}
+
+.filled {
+  fill: var(--primary);
+}
+
+.editable {
+  cursor: pointer;
+}

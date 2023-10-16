@@ -37,11 +37,14 @@ export default function TopPageComponent({
 			)}
 			<div className={stls.skills}>
 				<Htag tag='h2'>Получаемые навыки</Htag>
-				{page.tags.map(tag => (
-					<Tag key={tag} color='primary'>
-						{tag}
-					</Tag>
-				))}
+
+				<div>
+					{page.tags.map(tag => (
+						<Tag className={stls.tag} key={tag} color='primary'>
+							{tag}
+						</Tag>
+					))}
+				</div>
 			</div>
 		</div>
 	)
