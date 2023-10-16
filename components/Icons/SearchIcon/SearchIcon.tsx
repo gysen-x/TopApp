@@ -1,6 +1,6 @@
 import { SearchIconProps } from './SearchIcon.props'
 
-export default function SearchIcon({
+export function SearchIcon({
 	width = '15',
 	height = '15',
 	className,

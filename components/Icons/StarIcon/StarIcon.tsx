@@ -5,7 +5,7 @@ import cn from 'classnames'
 import { IStarIconProps } from './StarIcon.props'
 import { useState } from 'react'
 
-export const StarIcon = ({ className, ...props }: IStarIconProps) => {
+const StarIcon = ({ className, ...props }: IStarIconProps) => {
 	const [checked, setChecked] = useState(true)
 
 	return (
@@ -34,3 +34,5 @@ export const StarIcon = ({ className, ...props }: IStarIconProps) => {
 		</div>
 	)
 }
+
+export default StarIcon

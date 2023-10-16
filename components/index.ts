@@ -20,8 +20,8 @@ export { default as Rating } from './global/Rating/Rating'
 
 // icons
 export { default as ArrowIcon } from './icons/ArrowIcon/ArrowIcon'
-export * from './icons/StarIcon/StarIcon'
-export * from './icons/RateIcon/RateIcon'
+export { default as StarIcon } from './icons/StarIcon/StarIcon'
+export { default as RateIcon } from './icons/RateIcon/RateIcon'
 export * from './icons/CheckIcon/CheckIcon'
 export * from './icons/SortIcon/SortIcon'
 export * from './icons/SearchIcon/SearchIcon'

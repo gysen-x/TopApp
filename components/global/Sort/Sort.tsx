@@ -4,7 +4,7 @@ import stls from './Sort.module.css'
 import cn from 'classnames'
 import { SortEnum, SortProps } from './Sort.props'
 
-import SortIcon from '@/components/icons/SortIcon/SortIcon'
+import { SortIcon } from '../../icons/SortIcon/SortIcon'
 
 export function Sort({ sort, setSort, className, ...props }: SortProps) {
 	return (
