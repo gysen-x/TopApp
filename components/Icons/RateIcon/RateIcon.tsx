@@ -1,6 +1,6 @@
 import { RateIconProps } from './RateIcon.props'
 
-export const RateIcon = ({
+const RateIcon = ({
 	filled = false,
 	width = '20',
 	height = '20',
@@ -24,3 +24,5 @@ export const RateIcon = ({
 		</div>
 	)
 }
+
+export default RateIcon

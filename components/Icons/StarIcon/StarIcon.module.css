@@ -1,0 +1,54 @@
+/*------ Settings ------*/
+.container {
+  --color: rgb(101, 70, 226);
+  --size: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+  font-size: var(--size);
+  user-select: none;
+  fill: var(--color);
+}
+
+.container .starRegular {
+  position: absolute;
+  animation: keyframes-star .5s;
+}
+
+.container .starSolid {
+  position: absolute;
+  animation: keyframes-star .5s;
+  display: none;
+}
+
+/* ------ On check event ------ */
+.container input:checked~.starRegular {
+  display: none;
+}
+
+.container input:checked~.starSolid {
+  display: block;
+}
+
+/* ------ Hide the default checkbox ------ */
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* ------ Animations ------ */
+@keyframes keyframes-star {
+  0% {
+    transform: rotate(0deg) scale(0);
+    opacity: 0;
+  }
+
+  50% {
+    transform: rotate(10deg) scale(1.3);
+  }
+}

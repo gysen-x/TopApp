@@ -16,11 +16,13 @@ export default async function TopPage({
 	params: { alias: string; type: string }
 }) {
 	const firstCategoryItem = firstLevelMenu.find(m => m.route === params.type)
-	const products = await getProduct()
 	const page = await getPageTopApp(params.alias)
+
 	if (!page || !firstCategoryItem) {
 		notFound()
 	}
+
+	const products = await getProduct(page?.category)
 
 	return (
 		<>

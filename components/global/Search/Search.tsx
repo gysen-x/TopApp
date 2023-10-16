@@ -7,7 +7,7 @@ import SearchProps from './Search.props'
 import { Input } from '../Input/Input'
 import { Button } from '@/components'
 import { useState } from 'react'
-import SearchIcon from '@/components/icons/SearchIcon/SearchIcon'
+import { SearchIcon } from '@/components/icons/SearchIcon/SearchIcon'
 import { useRouter } from 'next/navigation'
 
 export const Search = ({ className, ...props }: SearchProps): JSX.Element => {

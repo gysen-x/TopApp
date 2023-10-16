@@ -15,7 +15,7 @@ export default function Products({
 	className,
 	...props
 }: ProductsProps) {
-	const [{ products: sortedProducts, sort }, dispatchSort] = useReducer(
+	const [{ products: sortedProducts, sort }, dispatch] = useReducer(
 		sortReducer,
 		{
 			products,
@@ -24,7 +24,7 @@ export default function Products({
 	)
 
 	const setSort = (sort: SortEnum) => {
-		dispatchSort({ type: sort })
+		dispatch({ type: sort })
 	}
 
 	return (

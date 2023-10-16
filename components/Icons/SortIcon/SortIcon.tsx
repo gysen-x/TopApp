@@ -1,6 +1,6 @@
 import { SortIconProps } from './SortIcon.props'
 
-export default function SortIcon({
+export function SortIcon({
 	width = '20',
 	height = '13',
 	className,
