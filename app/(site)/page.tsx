@@ -6,7 +6,7 @@ export default function Home() {
 		<main>
 			<Htag tag='h1'>Title</Htag>
 			<Button appearance='primary' arrow='right'>
-				Button
+				Button 1
 			</Button>
 			<Htag tag='h2'>Subtitle</Htag>
 			<Button appearance='ghost' arrow='down'>
